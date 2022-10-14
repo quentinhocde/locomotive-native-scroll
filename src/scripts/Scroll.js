@@ -99,11 +99,12 @@ export default class extends Core {
             y: this.windowHeight / 2
         };
 
+        this.checkContext();
+
         this.initContainerSize();
 
         if (Object.entries(this.els).length) {
-            this.updateElements();
-            this.transformElements(true);
+            this.update();
         }
     }
 

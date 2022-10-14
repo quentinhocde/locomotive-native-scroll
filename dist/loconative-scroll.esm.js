@@ -1233,11 +1233,11 @@ var _default$1 = /*#__PURE__*/function (_Core) {
         x: this.windowWidth / 2,
         y: this.windowHeight / 2
       };
+      this.checkContext();
       this.initContainerSize();
 
       if (Object.entries(this.els).length) {
-        this.updateElements();
-        this.transformElements(true);
+        this.update();
       }
     }
   }, {
