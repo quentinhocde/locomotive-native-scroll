@@ -486,6 +486,18 @@ export default class extends Core {
         this.transformElements(true);
     }
 
+    startScroll() {
+        if (this.lenis != undefined) {
+            this.lenis.start();
+        }
+    }
+
+    stopScroll() {
+        if (this.lenis != undefined) {
+            this.lenis.stop();
+        }
+    }
+
     destroy() {
         super.destroy();
         cancelAnimationFrame(this.rafInstance);

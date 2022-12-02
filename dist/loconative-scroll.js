@@ -1589,6 +1589,20 @@
         this.transformElements(true);
       }
     }, {
+      key: "startScroll",
+      value: function startScroll() {
+        if (this.lenis != undefined) {
+          this.lenis.start();
+        }
+      }
+    }, {
+      key: "stopScroll",
+      value: function stopScroll() {
+        if (this.lenis != undefined) {
+          this.lenis.stop();
+        }
+      }
+    }, {
       key: "destroy",
       value: function destroy() {
         _get(_getPrototypeOf(_default.prototype), "destroy", this).call(this);
