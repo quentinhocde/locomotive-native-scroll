@@ -1,7 +1,6 @@
 import Core from './Core';
 import smoothscroll from 'smoothscroll-polyfill';
 import { getTranslate } from './utils/transform';
-import { lerp } from './utils/maths';
 import Lenis from '@studio-freight/lenis';
 
 export default class extends Core {
