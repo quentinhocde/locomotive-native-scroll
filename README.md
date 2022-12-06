@@ -161,21 +161,22 @@ scroll.on('call', (func, way, obj) => {
 
 ## Element attributes
 
-| Attribute               | Values                   | Description                                                                              |
-| ----------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
-| `data-scroll`           |                          | Detect if in-view.                                                                       |
-| `data-scroll-id`        | `string`                 | (Optional) Useful if you want to scope your element and get the progress of your element in the viewport for example. |
+| Attribute               | Values                   | Description                                                                                                                                                                                                                               |
+|-------------------------| ------------------------ |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `data-scroll`           |                          | Detect if in-view.                                                                                                                                                                                                                        |
+| `data-scroll-id`        | `string`                 | (Optional) Useful if you want to scope your element and get the progress of your element in the viewport for example.                                                                                                                     |
 | `data-scroll-container` |                          | Defines the scroll container. Required for [basic styling](https://github.com/quentinhocde/loconative-scroll/blob/master/dist/loconative-scroll.css).                                                                                     |
-| `data-scroll-section`   |                          | Defines a scrollable section. Splitting your page into sections may improve performance. |
-| `data-scroll-class`     | `string`                 | Element in-view class.                                                                   |
-| `data-scroll-offset`    | `string`                 | Element in-view trigger offset : `bottom,top`<br>First value is `bottom` offset, second (optional) is `top` offset.<br> Percent is relative to viewport height, otherwise it's absolute pixels.<br>E.g. `"10"`, `"100,50%"`, `"25%, 15%"`  |
-| `data-scroll-repeat`    | `boolean`                | Element in-view detection repeat.                                                        |
-| `data-scroll-call`      | `string`                 | Element in-view trigger call event.                                                      |
-| `data-scroll-position`  | `string`                 | `top`, `bottom`, `left` or `right`<br>Window position of in-view trigger.                |
-| `data-scroll-speed`     | `number`                 | ![Smooth only][smooth-only]<br>Element parallax speed. A negative value will reverse the direction. |                          |
-| `data-scroll-direction` | `string`                 | ![Smooth only][smooth-only]<br>Element's parallax direction. `vertical` or `horizontal`  |
-| `data-scroll-sticky`    |                          | <strong>Deprecated</strong> <br> Have fun and use `position: sticky` |
-| `data-scroll-target`    | `string`                 | ![Smooth only][smooth-only]<br>Target element's in-view position.                        |
+| `data-scroll-section`   |                          | Defines a scrollable section. Splitting your page into sections may improve performance.                                                                                                                                                  |
+| `data-scroll-class`     | `string`                 | Element in-view class.                                                                                                                                                                                                                    |
+| `data-scroll-offset`    | `string`                 | Element in-view trigger offset : `bottom,top`<br>First value is `bottom` offset, second (optional) is `top` offset.<br> Percent is relative to viewport height, otherwise it's absolute pixels.<br>E.g. `"10"`, `"100,50%"`, `"25%, 15%"` |
+| `data-scroll-repeat`    | `boolean`                | Element in-view detection repeat.                                                                                                                                                                                                         |
+| `data-scroll-call`      | `string`                 | Element in-view trigger call event.                                                                                                                                                                                                       |
+| `data-scroll-position`  | `string`                 | `top`, `bottom`, `left` or `right`<br>Window position of in-view trigger.                                                                                                                                                                 |
+| `data-scroll-speed`     | `number`                 | ![Smooth only][smooth-only]<br>Element parallax speed. A negative value will reverse the direction.                                                                                                                                       |                          |
+| `data-scroll-delay`     | `number`                 | ![Smooth only][smooth-only]<br>Element parallax delay, in milliseconds.                                                                                                                                  |                          |
+| `data-scroll-direction` | `string`                 | ![Smooth only][smooth-only]<br>Element's parallax direction. `vertical` or `horizontal`                                                                                                                                                   |
+| `data-scroll-sticky`    |                          | <strong>Deprecated</strong> <br> Have fun and use `position: sticky`                                                                                                                                                                      |
+| `data-scroll-target`    | `string`                 | ![Smooth only][smooth-only]<br>Target element's in-view position.                                                                                                                                                                         |
 
 ## Instance methods
 
