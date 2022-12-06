@@ -301,17 +301,17 @@ export default class extends Core {
 
         if (!delay) {
             transform = `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${x},${y},0,1)`;
+            element.style.webkitTransform = transform;
+            element.style.msTransform = transform;
+            element.style.transform = transform;
         } else {
-            let start = getTranslate(element);
-            let lerpX = lerp(start.x, x, delay);
-            let lerpY = lerp(start.y, y, delay);
-
-            transform = `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${lerpX},${lerpY},0,1)`;
+            setTimeout(() => {
+                transform = `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${x},${y},0,1)`;
+                element.style.webkitTransform = transform;
+                element.style.msTransform = transform;
+                element.style.transform = transform;
+            }, delay);
         }
-
-        element.style.webkitTransform = transform;
-        element.style.msTransform = transform;
-        element.style.transform = transform;
     }
 
     transformElements(isForced, setAllElements = false) {
@@ -332,7 +332,7 @@ export default class extends Core {
                 transformDistance = 0;
             }
 
-            if (current.inView || setAllElements) {
+            if (current.inView || current.delay || setAllElements) {
                 switch (current.position) {
                     case 'top':
                         transformDistance =
