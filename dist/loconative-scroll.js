@@ -1,4 +1,4 @@
-/* loconative-scroll v1.0.0 | MIT License | https://github.com/quentinhocde/loconative-scroll */
+/* loconative-scroll v1.0.1 | MIT License | https://github.com/quentinhocde/loconative-scroll */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -193,7 +193,7 @@
   }
 
   var defaults = {
-    el: document,
+    el: document.querySelector('body'),
     wrapper: window,
     name: 'scroll',
     offset: [0, 0],

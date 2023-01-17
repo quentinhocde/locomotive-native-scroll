@@ -1,4 +1,4 @@
-/* loconative-scroll v1.0.0 | MIT License | https://github.com/quentinhocde/loconative-scroll */
+/* loconative-scroll v1.0.1 | MIT License | https://github.com/quentinhocde/loconative-scroll */
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -187,7 +187,7 @@ function _nonIterableRest() {
 }
 
 var defaults = {
-  el: document,
+  el: document.querySelector('body'),
   wrapper: window,
   name: 'scroll',
   offset: [0, 0],

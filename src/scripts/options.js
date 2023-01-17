@@ -1,5 +1,5 @@
 export const defaults = {
-    el: document,
+    el: document.querySelector('body'),
     wrapper: window,
     name: 'scroll',
     offset: [0, 0],
