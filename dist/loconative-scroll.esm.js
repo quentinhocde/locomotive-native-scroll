@@ -1,4 +1,4 @@
-/* loconative-scroll v1.0.1 | MIT License | https://github.com/quentinhocde/loconative-scroll */
+/* loconative-scroll v1.0.2 | MIT License | https://github.com/quentinhocde/loconative-scroll */
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -206,6 +206,10 @@ var defaults = {
   initClass: 'has-scroll-init',
   duration: 1.2,
   easing: function easing(t) {
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  },
+  // https://easings.net,
+  scrollToEasing: function scrollToEasing(t) {
     return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
   },
   // https://easings.net
@@ -1569,10 +1573,12 @@ var _default$1 = /*#__PURE__*/function (_Core) {
       var offset = parseInt(options.offset) || 0; // An offset to apply on top of given `target` or `sourceElem`'s target
 
       var duration = options.duration || 1;
+      var easing = this.scrollToEasing;
       this.lenis.scrollTo(target, {
         offset: offset,
         immediate: options.immediate,
-        duration: duration
+        duration: duration,
+        easing: easing
       });
     }
   }, {

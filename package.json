@@ -1,6 +1,6 @@
 {
     "name": "loconative-scroll",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Detection of elements in viewport & smooth native scrolling.",
     "repository": "quentinhocde/loconative-scroll",
     "author": "Quentin Hocdé <info@quentinhocde.com> (https://quentinhocde.com)",

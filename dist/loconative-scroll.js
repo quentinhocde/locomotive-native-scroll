@@ -1,4 +1,4 @@
-/* loconative-scroll v1.0.1 | MIT License | https://github.com/quentinhocde/loconative-scroll */
+/* loconative-scroll v1.0.2 | MIT License | https://github.com/quentinhocde/loconative-scroll */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -212,6 +212,10 @@
     initClass: 'has-scroll-init',
     duration: 1.2,
     easing: function easing(t) {
+      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+    },
+    // https://easings.net,
+    scrollToEasing: function scrollToEasing(t) {
       return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
     },
     // https://easings.net
@@ -1575,10 +1579,12 @@
         var offset = parseInt(options.offset) || 0; // An offset to apply on top of given `target` or `sourceElem`'s target
 
         var duration = options.duration || 1;
+        var easing = this.scrollToEasing;
         this.lenis.scrollTo(target, {
           offset: offset,
           immediate: options.immediate,
-          duration: duration
+          duration: duration,
+          easing: easing
         });
       }
     }, {

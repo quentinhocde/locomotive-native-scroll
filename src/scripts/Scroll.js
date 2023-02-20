@@ -476,8 +476,14 @@ export default class extends Core {
         // Parse options
         let offset = parseInt(options.offset) || 0; // An offset to apply on top of given `target` or `sourceElem`'s target
         let duration = options.duration || 1;
+        let easing = this.scrollToEasing;
 
-        this.lenis.scrollTo(target, { offset, immediate: options.immediate, duration: duration });
+        this.lenis.scrollTo(target, {
+            offset,
+            immediate: options.immediate,
+            duration: duration,
+            easing: easing
+        });
     }
 
     update() {

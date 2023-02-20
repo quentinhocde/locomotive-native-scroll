@@ -14,7 +14,8 @@ export const defaults = {
     smoothClass: 'has-scroll-smooth',
     initClass: 'has-scroll-init',
     duration: 1.2,
-    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
+    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net,
+    scrollToEasing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
     scrollFromAnywhere: false,
     touchMultiplier: 3,
     resetNativeScroll: true,
