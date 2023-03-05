@@ -1029,6 +1029,7 @@
     if (!window.getComputedStyle) return;
     var style = getComputedStyle(el);
     var transform = style.transform || style.webkitTransform || style.mozTransform;
+    // mat is undefined for pages loaded using pjax
     var mat = transform.match(/^matrix3d\((.+)\)$/);
 
     if (mat) {
