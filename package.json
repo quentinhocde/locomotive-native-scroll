@@ -31,7 +31,7 @@
         "prettier": "^2.1.2"
     },
     "dependencies": {
-        "@studio-freight/lenis": "^0.2.19",
+        "@studio-freight/lenis": "^1.0.1",
         "smoothscroll-polyfill": "^0.4.4",
         "virtual-scroll": "^1.5.2"
     }
