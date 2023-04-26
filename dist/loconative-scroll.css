@@ -1,10 +1,9 @@
-/*! loconative-scroll v1.0.2 | MIT License | https://github.com/quentinhocde/loconative-scroll */
+/*! loconative-scroll v1.0.3 | MIT License | https://github.com/quentinhocde/loconative-scroll */
 html {
   scroll-behavior: initial; }
   html.has-scroll-dragging {
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none; }
 
 html,
